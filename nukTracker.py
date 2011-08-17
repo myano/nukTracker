@@ -21,7 +21,6 @@ This script removes all trackers from a .torrent file or multiple torrent
 files in a given directory.
 """
 
-import platform
 import optparse
 import os
 import re
