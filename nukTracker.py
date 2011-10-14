@@ -60,6 +60,16 @@ def nuke(torrent):
             if endlist > 0:
                 metadata = metadata[:pos_announce_list] + metadata[endlist +
                         10:]
+            else:
+                ## there is no "announceee"
+                re_endlist = re.compile("ee\d")
+                endlist_list = re_endlist.findall(metadata)
+                if len(endlist_list) > 0:
+                    endlist_pos = metadata.find(endlist_list[0])
+                    len_endlist = len(endlist_list[0])
+                    metadata = metadata[:pos_announce_list] + \
+                            metadata[endlist_pos + len_endlist - 1:]
+
         nothing_left = metadata.find("llee")
         if nothing_left > 0:
             metadata = metadata[:pos_announce_list] + metadata[nothing_left +
