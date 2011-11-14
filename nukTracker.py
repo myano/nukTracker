@@ -13,7 +13,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License
+ou should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
@@ -102,7 +102,7 @@ def remove_dir(option, opt_str, value, parser):
             f.close()
             num_of_files += 1
             print each, " ... completed!"
-    print "Processed %d of torrent files successfully." % (num_of_files)
+    print "Processed %d torrent files successfully." % (num_of_files)
 
 
 def remove_file(option, opt_str, file_path, parser):
